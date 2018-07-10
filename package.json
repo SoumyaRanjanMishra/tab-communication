@@ -1,0 +1,14 @@
+{
+  "name": "tab-communication",
+  "version": "1.0.0",
+  "description": "communicate between multiple tabs",
+  "main": "index.js",
+  "scripts": {
+    "serve": "http-server"
+  },
+  "author": "Soumya",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
