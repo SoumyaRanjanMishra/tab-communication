@@ -3,15 +3,6 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// The activate handler takes care of cleaning up old caches.
-// self.addEventListener('activate', event => {
-//   console.log("Activate event")
-// });
-
-// self.addEventListener('fetch', event => {
-//   // use of cached content.
-// });
-
 self.addEventListener('message', function(event){
   //console.log("Message recieved in service worker:", event);
   var data = event.data;
@@ -27,12 +18,10 @@ self.sendTabState = function(client, data){
 self.syncTabState = function(data, clientId){
   clients.matchAll().then(clients => {
       clients.forEach(client => {
-
           // No need to update the tab that sent the data
           if (client.id !== clientId) {
               self.sendTabState(client, data)
-          }
-         
+          }         
       })
   })
 }
