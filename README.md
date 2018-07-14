@@ -1,5 +1,5 @@
 # tab-communication
-Communicate between two tabs in same browser window
+Communicate and reflect changes between two tabs in the same browser window
 
 ## How to run
 To serve it in localhost please run the below command:
